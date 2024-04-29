@@ -1,24 +1,36 @@
-# Gerenciador de Contatos
+# Contact Manager
 
-Este é um programa simples em Python que permite gerenciar uma lista de contatos. Ele oferece várias funcionalidades, como adicionar, listar, salvar e carregar contatos, além de exportar contatos para arquivos CSV e Word.
+This is a simple Python program that allows managing a list of contacts. It offers various functionalities such as adding, listing, saving, and loading contacts, as well as exporting contacts to CSV and Word files.
 
-## Funcionalidades
+## Features
 
-- Adicionar um novo contato, inserindo o nome, email e telefone.
-- Listar todos os contatos armazenados.
-- Salvar os contatos em um arquivo binário usando o módulo pickle.
-- Carregar os contatos de um arquivo binário previamente salvo.
-- Limpar o arquivo de contatos.
-- Excluir o arquivo de contatos.
-- Exportar os contatos para um arquivo CSV.
-- Exportar os contatos para um arquivo Word (.docx).
+- Add a new contact by entering the name, email, and phone number.
+- List all stored contacts.
+- Save contacts to a binary file using the pickle module.
+- Load contacts from a previously saved binary file.
+- Clear the contacts file.
+- Delete the contacts file.
+- Export contacts to a CSV file.
+- Export contacts to a Word file (.docx).
 
-## Requisitos
+## Requirements
 
 - Python 3.x
-- Bibliotecas:
+- Libraries:
   - pickle
   - csv
   - docx
   - os
   - platform
+
+## Installation of Dependencies
+
+To install the dependencies, run the following command in the terminal:
+
+pip install python-docx
+
+## How to Use
+
+1. Run the `pickle_example.py` file in a Python environment.
+2. Choose the menu options to interact with the list of contacts.
+3. Follow the instructions provided in the console for each operation.
