@@ -3,6 +3,7 @@ import csv
 import os
 from docx import Document
 import platform
+from openpyxl import Workbook
 
 def clear_screen():
     if platform.system() == 'Windows':
@@ -70,6 +71,15 @@ def exportar_para_word(contatos):
     doc.save('contatos.docx')
     print("Contatos exportados para Word com sucesso!")
 
+def exportar_para_excel(contatos):
+    wb = Workbook()
+    ws = wb.active
+    ws.append(['Nome', 'Email', 'Telefone'])
+    for contato in contatos:
+        ws.append([contato['nome'], contato['email'], contato['telefone']])
+    wb.save('contatos.xlsx')
+    print("Contatos exportados para Excel com sucesso!")
+
 def menu():
     print("\n### Menu ###")
     print("1. Adicionar Contato")
@@ -80,7 +90,8 @@ def menu():
     print("6. Eliminar Arquivo")
     print("7. Exportar para CSV")
     print("8. Exportar para Word")
-    print("9. Sair")
+    print("9. Exportar para Excel")
+    print("10. Sair")
 
     escolha = input("Escolha uma opção: ")
     return escolha
@@ -107,6 +118,8 @@ if __name__ == "__main__":
         elif escolha == "8":
             exportar_para_word(contatos)
         elif escolha == "9":
+            exportar_para_excel(contatos)
+        elif escolha == "10":
             print("Saindo...")
             break
         else:
